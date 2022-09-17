@@ -17,6 +17,8 @@ var RoomsView = {
 
   renderRoom: function(roomname) {
     // TODO: Render out a single room.
+    RoomsView.$select.append(`<ul><li>${roomname}</li></ul>`);
+
   },
 
   handleChange: function(event) {

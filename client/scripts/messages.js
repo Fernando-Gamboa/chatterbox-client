@@ -5,9 +5,23 @@
 var Messages = {
 
   // TODO: Define how you want to store your messages.
-  _data: null,
+  _data: [],
+
+  // add to, and generally interact with the messages.
+  addMessage: (message) => {
+    newMessage = {
+      username: message.username,
+      text: message.text,
+      roomName: message.roomname
+    };
+
+    Messages._data[message.message_id] = newMessage;
+  },
 
   // TODO: Define methods which allow you to retrieve from,
-  // add to, and generally interact with the messages.
+  getMessage: (message) => {
+    // return Messages._data[message]
+
+  }
 
 };

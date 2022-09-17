@@ -25,12 +25,21 @@ var App = {
 
   fetch: function(callback = ()=>{}) {
     Parse.readAll((data) => {
-      // examine the response from the server request:
-      console.log(data);
-
       // TODO: Use the data to update Messages and Rooms
       // and re-render the corresponding views.
+
+
+      // store data locally to messages.js
+      Messages._data = data;
+
+      MessagesView.render();
+      Rooms.addRoom();
+
+      callback();
     });
+
+    // setTimeout 2-5 seconds
+
   },
 
   startSpinner: function() {
