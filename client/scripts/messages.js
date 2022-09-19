@@ -19,7 +19,7 @@ var Messages = {
   },
 
   // TODO: Define methods which allow you to retrieve from,
-  getMessage: (message) => {
+  get: (message) => {
     // return Messages._data[message]
 
   }

@@ -5,9 +5,21 @@
 var Friends = {
   // TODO: Define how you want to store your list of friends.
 
-  _data: null,
+  _data: [],
 
   // TODO: Define methods which allow you to add, toggle,
   // and check the friendship status of other users.
+
+  toggleStatus: function(name) {
+
+    let list = Friends._data;
+
+    if (list.includes(name)) {
+      list.splice(list.indexOf(name), 1);
+    } else {
+      list.push(name);
+    };
+
+  },
 
 };
